@@ -22,11 +22,11 @@ const App: React.FC = () => {
     const { destination, source } = result;
 
     console.log(result);
-
+    // droppableな場所でない場合
     if (!destination) {
       return;
     }
-
+    // 同じ場所にdropし、表示順も変わらない場合
     if (
       destination.droppableId === source.droppableId &&
       destination.index === source.index
